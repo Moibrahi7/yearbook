@@ -1,0 +1,30 @@
+img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10px;
+}
+.grad-card{
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: 80%;
+    align-self: center;
+    margin-left: 10%;
+    li {
+        background-color: black;
+        color: white;
+        list-style-type: none;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2vw;
+        margin-bottom: 2vw;
+        padding: 2vw;
+        border-radius: 10px;
+        width: 20vw;
+    }
+}

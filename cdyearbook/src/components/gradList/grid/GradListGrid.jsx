@@ -1,11 +1,11 @@
 import React from "react";
-import { GradCard } from "../../gradCard/gradCard";
-import "GradListGrid.css";
+import { GradCard } from "./../../gradcard/GradCard";
+import "./GradListGrid.css";
 
 export function GradListGrid () {
     return(
-        <>
-
-        </>
+        <div className="grid">
+            <GradCard/>
+        </div>
     )
 }
