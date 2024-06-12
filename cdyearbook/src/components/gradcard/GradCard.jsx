@@ -1,5 +1,6 @@
 import React from "react";
 import data from "../../resources/entries.json";
+import "./GradCard.css"
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
  const queryClient = new QueryClient();
 
@@ -13,7 +14,7 @@ export function GradCard () {
                         {console.log("/img/" + gradInfo.img)}
                         <img src={"/img/" + gradInfo.img} alt={gradInfo.name} />
                         <h1>{gradInfo.name}</h1>
-                        <p>{gradInfo.qoute}</p>
+                        <p>&quot;{gradInfo.qoute}&quot;</p>
                     </li>
                 </div>
             ))}
