@@ -9,9 +9,8 @@ export function GradCard () {
     return(
         <div className= "grad-card">
             {data.map((gradInfo) => (
-                <div className="carousel-item" key={gradInfo.entryNum}>
+                <div className="item" key={gradInfo.entryNum}>
                     <li>
-                        {console.log("/img/" + gradInfo.img)}
                         <img src={"/img/" + gradInfo.img} alt={gradInfo.name} />
                         <h1>{gradInfo.name}</h1>
                         <p>&quot;{gradInfo.qoute}&quot;</p>
