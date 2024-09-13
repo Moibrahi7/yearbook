@@ -1,5 +1,5 @@
 import React from "react";
-import { GradCard } from "./../../gradcard/GradCard";
+import { GradCard } from "../gradcard/GradCard";
 import "./GradListGrid.css";
 
 export function GradListGrid () {

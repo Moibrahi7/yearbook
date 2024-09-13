@@ -1,6 +1,7 @@
-.carousol-home{
+.carousol{
     align-content: center;
     height: 100vh;
+    background-color: grey;
 }
 .grad-card-c{
     margin-top: 15px;

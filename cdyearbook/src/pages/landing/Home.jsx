@@ -7,7 +7,7 @@ export default function Home (){
     return(
         <>
             {yearData.map((info) => (
-             <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol-home" navButtonsAlwaysVisible = {true} indicators = {false}>  
+             <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol" navButtonsAlwaysVisible = {true} indicators = {false}>  
                         {info.entries.map((gradInfo) =>(
                         <Paper>
                             <div className= "grad-card-c">

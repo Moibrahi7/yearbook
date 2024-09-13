@@ -26,11 +26,13 @@ const responsive = {
     items: 1
   }
 };
-
+// const findCatById = (id) => {
+//   return data.cats.find(cat => cat.id === id);
+// };
 export function GradListCarousol (){
     return(
         <>
-          <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol" navButtonsAlwaysVisible = {true} indicators = {false}>  
+          <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol bg-gray-800" navButtonsAlwaysVisible = {true} indicators = {false}>  
             {data.map((gradInfo) => (
               <Paper>
                 <div className= "grad-card-c">
