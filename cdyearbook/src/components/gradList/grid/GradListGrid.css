@@ -1,0 +1,47 @@
+img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10px;
+}
+.grid{
+    position: relative;
+    align-self: center;
+    margin-top: 5%;
+    margin-right: 10%;
+    font-size: 80%;
+    flex-direction: column;
+}
+.grad-card{
+    text-align: center;
+    height: 60%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* margin: 10px; */
+    width: 80%;
+    align-self: center;
+    margin-left: 10%;
+    li {
+        height: 50vh ;
+        background-color: rgba(61, 61, 117, .8);
+        color: white;
+        list-style-type: none;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2vw;
+        margin-bottom: 2vw;
+        padding: 1vw;
+        padding: auto;
+        border-radius: 10px;
+        width: 20vw;
+    }
+}
+@media (max-widt) {
+  .grad-card {
+    min-width: 100%;
+  }
+}
