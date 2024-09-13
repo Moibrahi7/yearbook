@@ -1,6 +1,5 @@
 import React from "react";
 import "./GradListCarousol.css";
-import { GradCard } from "./../../gradcard/GradCard";
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 
@@ -29,25 +28,21 @@ const responsive = {
 };
 
 export function GradListCarousol (){
-    const info = data;
-
-   
     return(
         <>
-            <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol bg-black" navButtonsAlwaysVisible = {true} >  
-                    {data.map((gradInfo) => (
-                        <Paper>
-                            <div className= "grad-card-c">
-                                <li>
-                                    <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />
-                                    <h1>{gradInfo.name}</h1>
-                                    <p>&quot;{gradInfo.qoute}&quot;</p>
-                                </li>
-                            </div>
-                        </Paper>
-                    ))}
-                </Carousel>
-
+          <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol" navButtonsAlwaysVisible = {true} indicators = {false}>  
+            {data.map((gradInfo) => (
+              <Paper>
+                <div className= "grad-card-c">
+                  <li>
+                    <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />
+                    <h1>{gradInfo.name}</h1>
+                    <p>&quot;{gradInfo.qoute}&quot;</p>
+                  </li>
+                </div>
+              </Paper>
+            ))}
+          </Carousel>
         </>
     )
     
