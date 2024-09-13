@@ -1,16 +1,18 @@
 import React from "react";
-import data from "../../../resources/entries.json";
+import data from "../../../resources/yearEntries.json";
 import "./GradCard.css"
+import { useParams } from "react-router-dom";
  
-// const findCatById = (id) => {
-//     return data.cats.find(cat => cat.id === id);
-// };
+const findCohortById = (cohort) => {
+    return data.find(co => co.cohort === cohort);
+};
 
 export function GradCard () {
-    const info = data;
+    let { cohort } = useParams()
+    const coData = findCohortById(cohort)
     return(
         <div className= "grad-card">
-            {data.map((gradInfo) => (
+            {coData.entries.map((gradInfo) => (
                 <div className="item" key={gradInfo.entryNum}>
                     <li>
                         <img src={"/img/" + gradInfo.img} alt={gradInfo.name} />

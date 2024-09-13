@@ -2,10 +2,9 @@ import React from "react";
 import "./GradListCarousol.css";
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
+import { useParams } from "react-router-dom";
+import data from "../../../resources/yearEntries.json";
 
-import data from "../../../resources/entries.json";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
- const queryClient = new QueryClient();
 
 const responsive = {
   superLargeDesktop: {
@@ -26,14 +25,16 @@ const responsive = {
     items: 1
   }
 };
-// const findCatById = (id) => {
-//   return data.cats.find(cat => cat.id === id);
-// };
+const findCohortById = (cohort) => {
+  return data.find(co => co.cohort === cohort);
+};
 export function GradListCarousol (){
+  let { cohort } = useParams()
+  const coData = findCohortById(cohort)
     return(
         <>
           <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol bg-gray-800" navButtonsAlwaysVisible = {true} indicators = {false}>  
-            {data.map((gradInfo) => (
+            {coData.entries.map((gradInfo) => (
               <Paper>
                 <div className= "grad-card-c">
                   <li>

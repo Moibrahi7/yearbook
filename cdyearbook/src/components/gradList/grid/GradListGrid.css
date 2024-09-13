@@ -7,9 +7,9 @@
     flex-direction: column;
     background-color: #c8c8c8;
     width: 100%;
+    align-items: center;
 }
 .grad-card{
-    font-size: 1vw;
     text-align: center;
     height: 60%;
     display: inline-flex;
@@ -20,6 +20,7 @@
     border-radius: 10px;
     width: 80%;
     align-self: center;
+    margin: auto;
     img{
         width: 20vw;
         height: 20vw;
@@ -40,6 +41,12 @@
         border-radius: 10px;
         width: 20vw;
     }
+}
+.grad-card h1{
+    font-size: 160%;
+}
+.grad-card p{
+    font-size: 100%;
 }
 @media (max-width: 660px) {
 

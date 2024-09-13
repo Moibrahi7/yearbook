@@ -8,20 +8,8 @@
     height: fit-content;
     font-family: "Montserrat";
     z-index: 1000;
-    img{
-        left: 0;
-        position: relative;
-        height: 40px;
-        z-index: 1001;
-    }
-}
-.head-links{
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    gap: 10px;
-    text-decoration: none;
     a{
+        transition: .25s linear;
         text-decoration: none;
         color: rgb(42, 61, 139);
         background-color: white;
@@ -36,7 +24,22 @@
         background-color: transparent;
         border: 2px solid white;
     }
+    img{
+        left: 0;
+        position: relative;
+        height: 40px;
+        z-index: 1001;
+    }
+}
+.head-links{
+    margin-right: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
 }
 .logo{
-    height: 50px;
+    margin: 10px;
 }
