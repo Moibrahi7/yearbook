@@ -16,6 +16,7 @@
         padding: 10px;
         border-radius: 10px;
         border: 2px solid transparent;
+        font-weight: bolder;
         
     }
     a:hover{
@@ -24,12 +25,18 @@
         background-color: transparent;
         border: 2px solid white;
     }
+    
     img{
         left: 0;
         position: relative;
         height: 40px;
         z-index: 1001;
     }
+}
+a.active{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
 }
 .head-links{
     margin-right: 10px;
