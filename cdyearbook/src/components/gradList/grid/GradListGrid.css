@@ -3,8 +3,35 @@
     position: relative;
     align-self: center;
     padding-top: 5%;
-    margin-top: 5%;
     flex-direction: column;
     width: 100%;
     align-items: center;
+}
+.add-btn{
+    display: flex;
+    position: relative;
+    align-items: right;
+    justify-content: right;
+    gap: 10px;
+    text-decoration: none;
+    margin-right: 14%;
+    margin-bottom: 5%;
+    margin-top: -3%;
+    a{
+        transition: .25s linear;
+        text-decoration: none;
+        color: rgb(42, 61, 139);
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        font-weight: bolder;
+        
+    }
+    a:hover{
+        transition: .25s linear;
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+    }
 }

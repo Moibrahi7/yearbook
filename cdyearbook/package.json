@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.7.1",
+    "express": "^4.21.0",
+    "express-fileupload": "^1.5.1",
     "mui": "^0.0.1",
     "netlify": "^13.1.21",
     "react": "^18.3.1",
