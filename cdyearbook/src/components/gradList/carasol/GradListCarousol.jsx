@@ -1,4 +1,3 @@
-import React from "react";
 import "./GradListCarousol.css";
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@mui/material'
@@ -11,27 +10,13 @@ const findCohortById = (cohort) => {
 export function GradListCarousol (){
   let { cohort } = useParams()
   const coData = findCohortById(cohort)
-  let backImg = "/img/${coData.entries[0].img}"
     return(
         <>
-          <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol bg-gray-800" navButtonsAlwaysVisible = {true} indicators = {false}>  
+          <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol bg-gray-800" navButtonsAlwaysVisible = {true} indicators = {true} indicatorContainerProps={{style: {marginTop: "15%", marginBottom: "-5%"}}}>  
             {coData.entries.map((gradInfo) => (
               <>
-                {/* <div 
-                  className="grad-card"
-                  style={{
-                    backgroundImage: `url("/img/${gradInfo.img}")`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    height: '100%',
-                    width: '100%',
-                    position: 'relative',
-                    alignSelf: 'center',
-                  }}
-                /> */}
               <Paper>
-                <div className= "grad-card-c">
+                <div className= "grad-card-ca">
                   <li>
                     <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />
                     <h1>{gradInfo.name}</h1>
@@ -46,3 +31,4 @@ export function GradListCarousol (){
     )
     
 }
+

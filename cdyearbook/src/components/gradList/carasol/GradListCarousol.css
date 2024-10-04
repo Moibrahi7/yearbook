@@ -2,4 +2,45 @@
   box-shadow: none !important;
   background-color: transparent !important;
 }
+.grad-card-ca{
+  font-size: 1.5vw;
+  text-align: center;
+  height: 60%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 80%;
+  align-self: center;
+  img{
+      width: 100%;
+      height: 60%;
+      border-radius: 10px;
+  }
+  li {
+      height: 30% ;
+      background-color: rgba(61, 61, 117, .8);
+      color: white;
+      list-style-type: none;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2vw;
+      margin-bottom: 2vw;
+      padding: 1vw;
+      padding: auto;
+      border-radius: 10px;
+      width: 20%;
+  }
+  h1{
+      font-size: 200%;
+      font-weight: bold;
+  }
+  p{
+      font-size: 140%;
+      font-weight: lighter;
+  }
 
+}
