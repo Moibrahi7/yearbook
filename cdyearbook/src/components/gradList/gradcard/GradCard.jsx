@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { Paper } from "@mui/material";
 import { useState } from "react";
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+
  
 const findCohortById = (cohort) => {
     return data.find(co => co.cohort === cohort);
@@ -48,7 +50,8 @@ export function GradCard () {
             </div>
             {amountOfCards < coData.entries.length && (
                 <button className="btn" onClick={loadMore}>
-                    Load More
+                    <ArrowDownwardIcon className="down-arrow-1" />
+                    <ArrowDownwardIcon className="down-arrow-2" />
                 </button>
             )}
         </div>
