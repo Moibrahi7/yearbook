@@ -12,10 +12,9 @@ export function GradListCarousol (){
   const coData = findCohortById(cohort)
     return(
         <>
-          <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol bg-gray-800" navButtonsAlwaysVisible = {true} indicators = {true} indicatorContainerProps={{style: {marginTop: "15%", marginBottom: "-5%"}}}>  
+          <Carousel autoPlay = {false} animation = "slide" className="carousol" navButtonsAlwaysVisible = {true} indicators = {false} indicatorContainerProps={{style: {marginTop: "15%", marginBottom: "-5%"}}} key={coData.cohort} >  
             {coData.entries.map((gradInfo) => (
-              <>
-              <Paper>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div className= "grad-card-ca">
                   <li>
                     <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />
@@ -23,8 +22,7 @@ export function GradListCarousol (){
                     <p>&quot;{gradInfo.qoute}&quot;</p>
                   </li>
                 </div>
-              </Paper>
-              </>
+              </div>
             ))}
           </Carousel>
         </>
