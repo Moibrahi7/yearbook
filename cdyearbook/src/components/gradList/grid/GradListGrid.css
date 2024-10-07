@@ -1,47 +1,37 @@
-img{
-    width: 20vw;
-    height: 20vw;
-    border-radius: 10px;
-}
+
 .grid{
     position: relative;
     align-self: center;
-    margin-top: 5%;
-    margin-right: 10%;
-    font-size: 80%;
+    padding-top: 5%;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
-.grad-card{
-    text-align: center;
-    height: 60%;
-    display: inline-flex;
-    flex-wrap: wrap;
+.add-btn{
+    display: flex;
     position: relative;
-    align-content: center;
-    justify-content: center;
-    border-radius: 10px;
-    /* margin: 10px; */
-    width: 80%;
-    align-self: center;
-    margin-left: 10%;
-    li {
-        height: 50vh ;
-        background-color: rgba(61, 61, 117, .8);
-        color: white;
-        list-style-type: none;
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        margin-left: 2vw;
-        margin-bottom: 2vw;
-        padding: 1vw;
-        padding: auto;
+    align-items: right;
+    justify-content: right;
+    gap: 10px;
+    text-decoration: none;
+    margin-right: 14%;
+    margin-bottom: 5%;
+    margin-top: -3%;
+    a{
+        transition: .25s linear;
+        text-decoration: none;
+        color: rgb(42, 61, 139);
+        background-color: white;
+        padding: 10px;
         border-radius: 10px;
-        width: 20vw;
+        border: 2px solid transparent;
+        font-weight: bolder;
+        
     }
-}
-@media (max-widt) {
-  .grad-card {
-    min-width: 100%;
-  }
+    a:hover{
+        transition: .25s linear;
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+    }
 }

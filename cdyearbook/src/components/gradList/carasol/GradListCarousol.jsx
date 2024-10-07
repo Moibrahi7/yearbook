@@ -1,54 +1,40 @@
-import React from "react";
 import "./GradListCarousol.css";
-import { GradCard } from "./../../gradcard/GradCard";
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@mui/material'
-
-import data from "../../../resources/entries.json";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
- const queryClient = new QueryClient();
-
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
+import { Paper } from '@mui/material'
+import { useParams } from "react-router-dom";
+import { db } from "../../../../firebase";
+import { collectionGroup, getDocs, query, where, orderBy, limit} from "firebase/firestore";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export function GradListCarousol (){
-    const info = data;
-
-   
+  let { cohort } = useParams()
+  const coData = query(collectionGroup(db, 'entries') , where('cohort', '==', parseFloat(cohort)), orderBy('entryNum', 'asc'));
+  let [gradData, setGradData] = useState([]);
+  useEffect(() => {
+    const getFoo = async () => {
+      const data = await getDocs(coData);
+      setGradData(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getFoo();
+  })
     return(
         <>
-            <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol bg-black" navButtonsAlwaysVisible = {true} >  
-                    {data.map((gradInfo) => (
-                        <Paper>
-                            <div className= "grad-card-c">
-                                <li>
-                                    <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />
-                                    <h1>{gradInfo.name}</h1>
-                                    <p>&quot;{gradInfo.qoute}&quot;</p>
-                                </li>
-                            </div>
-                        </Paper>
-                    ))}
-                </Carousel>
-
+          <Carousel autoPlay = {false} animation = "slide" className="carousol" navButtonsAlwaysVisible = {true} indicators = {false} indicatorContainerProps={{style: {marginTop: "15%", marginBottom: "-5%"}}} key={coData.cohort} >  
+            {gradData.map((gradInfo) => (
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} key={gradInfo.entryNum}>
+                <div className= "grad-card-ca">
+                  <li>
+                    <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />
+                    <h1>{gradInfo.name}</h1>
+                    <p>&quot;{gradInfo.quote}&quot;</p>
+                  </li>
+                </div>
+              </div>
+            ))}
+          </Carousel>
         </>
     )
     
 }
+

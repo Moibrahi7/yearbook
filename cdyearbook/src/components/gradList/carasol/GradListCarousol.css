@@ -1,37 +1,46 @@
-.carousol{
-  align-content: center;
-  background-color: #3d3b3b;
-}
 .css-1ps6pg7-MuiPaper-root{
   box-shadow: none !important;
   background-color: transparent !important;
 }
 
-.grad-card-c{
-  font-size: 80%;
-  margin-top: 3%;
-  height: 60vh;
+.grad-card-ca{
+  font-size: 1.5vw;
+  text-align: center;
+  height: 80vh;
   display: inline-flex;
   flex-wrap: wrap;
   position: relative;
   align-content: center;
   justify-content: center;
   border-radius: 10px;
-  width: 80%;
+  width: 80vw;
   align-self: center;
-  li {
-    height: 55vh;
-    background-color: rgba(183, 54, 54, 0.8);
-    color: white;
-    list-style-type: none;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2vw;
-    margin-bottom: 2vw;
-    padding: 1vw;
-    padding: auto;
-    border-radius: 10px;
-    width: 20vw;
+  img{
+      width: 100%;
+      height: 60%;
+      border-radius: 10px;
   }
+  li {
+      height: 80vh;
+      background-color: rgba(61, 61, 117, .8);
+      color: white;
+      list-style-type: none;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      padding: 1vw;
+      padding: auto;
+      border-radius: 10px;
+      width: 30vw;
+
+  }
+  h1{
+      font-size: 200%;
+      font-weight: bold;
+  }
+  p{
+      font-size: 140%;
+      font-weight: lighter;
+  }
+
 }

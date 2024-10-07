@@ -1,0 +1,145 @@
+[
+    {
+        "cohort": "24.1",
+        "entries": [
+            {
+                "name": "Aaron Santiago",
+                "qoute": "Its going to be one of those days",
+                "img": "aaron.jpeg",
+                "entryNum": 1
+            },
+            {
+                "name": "Agent Santiago",
+                "qoute": "Where is Aaron",
+                "img": "agentsantiago.jpeg",
+                "entryNum": 2
+            },
+            {
+                "name": "Anthony Mays",
+                "qoute": "Sure",
+                "img": "anthony.jpeg",
+                "entryNum": 3
+            },
+            {
+                "name": "Chukwuma Ibezim",
+                "qoute": "Im THE head duck, Brooklyn",
+                "img": "chukwuma.jpeg",
+                "entryNum": 4
+            },
+            {
+                "name": "Jada White",
+                "qoute": "Jit",
+                "img": "jada.jpeg",
+                "entryNum": 5
+            },
+            {
+                "name": "Jamar Taylor",
+                "qoute": "This guy is crazy",
+                "img": "jamar.jpeg",
+                "entryNum": 6
+            },
+            {
+                "name": "Jamira Bailey",
+                "qoute": "Shut up Chukwuma",
+                "img": "jamira.jpeg",
+                "entryNum": 7
+            },
+            {
+                "name": "Javyen Ware",
+                "qoute": "Maybe, I don't know, yeah...",
+                "img": "javy.jpeg",
+                "entryNum": 8
+            },
+            {
+                "name": "Jordan Eldridge",
+                "qoute": "Jordan's 60th Birthday, 4 time mvp!",
+                "img": "jordan.jpeg",
+                "entryNum": 9
+            },
+            {
+                "name": "Kevin Mason",
+                "qoute": "*background noise in zoom*",
+                "img": "kevin.jpeg",
+                "entryNum": 10
+            },
+            {
+                "name": "Kyvon Thompson",
+                "qoute": "Eminem is your favorite rapper!?!?!?",
+                "img": "kyvon.jpeg",
+                "entryNum": 11
+            },
+            {
+                "name": "Mohamed Ibrahim",
+                "qoute": "I hava a question",
+                "img": "mo.jpeg",
+                "entryNum": 12
+            },
+            {
+                "name": "Nataya Price",
+                "qoute": "*hates mice and ugly animals*",
+                "img": "nataya.jpeg",
+                "entryNum": 13
+            },
+            {
+                "name": "Randy Castro",
+                "qoute": "'Hi my name is Randy' *IDK he said like 30 words*",
+                "img": "randy.jpeg",
+                "entryNum": 14
+            },
+            {
+                "name": "Rich Hawkins III",
+                "qoute": "*Evil Laugh*",
+                "img": "rich.jpeg",
+                "entryNum": 15
+            },
+            {
+                "name": "Sherllin Torres",
+                "qoute": "Drop Top",
+                "img": "sherllin.jpeg",
+                "entryNum": 16
+            },
+            {
+                "name": "Sherllin Torres",
+                "qoute": "Drop Top",
+                "img": "sherllin.jpeg",
+                "entryNum": 17
+            },
+            {
+                "name": "Sherllin Torres",
+                "qoute": "Drop Top",
+                "img": "sherllin.jpeg",
+                "entryNum": 18
+            },
+            {
+                "name": "Tyriq Johnson",
+                "qoute": "Eminem > All",
+                "img": "tyriq.jpeg",
+                "entryNum": 19
+            },
+            {
+                "name": "Vicente Vigueras",
+                "qoute": "Hello my name is Vicente and I'm from Chile.",
+                "img": "vin.jpeg",
+                "entryNum": 20
+            }
+            
+        ] 
+    },
+    {
+        "cohort": "24.4",
+        "entries": [
+            {
+                "name": "Vicente Vigueras",
+                "qoute": "Hello my name is Vicente and I'm from Chile. Hulk Hulk Hulk",
+                "img": "vin.jpeg",
+                "entryNum": 19
+            },
+            {
+                "name": "Jordan Eldridge",
+                "qoute": "Jordan's 60th Birthday, 4 time mvp!",
+                "img": "jordan.jpeg",
+                "entryNum": 8
+            }
+        ]
+    }
+]
