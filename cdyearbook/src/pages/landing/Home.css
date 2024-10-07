@@ -54,11 +54,11 @@
     .grad-card-c, .grad-card-ca{ 
         transition: .25s all;
         li{
-            width: 30% !important;
-            height: 40% !important;
+            /* width: 30% !important; */
+            /* height: 40% !important; */
             min-width: 231px !important;
-            min-height: 482px !important;
-            font-size: 200% !important;
+            min-height: 300px !important;
+            /* font-size: 200% !important; */
         }
     }
   
@@ -68,7 +68,7 @@
     .grad-card-c, .grad-card-ca{ 
         li{
             width: 30%;
-            height: fit-content;
+            height: fit-content !important;
             font-size: 1.5vw;
         }
     }
