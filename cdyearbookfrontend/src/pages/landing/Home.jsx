@@ -13,7 +13,7 @@ export default function Home (){
                                 <li key={gradInfo.entryNum}>
                                     <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />
                                     <h1>{gradInfo.name}</h1>
-                                    <p>&quot;{gradInfo.qoute}&quot;</p>
+                                    <p>&quot;{gradInfo.quote}&quot;</p>
                                 </li>
                             </div>
                         </Paper>

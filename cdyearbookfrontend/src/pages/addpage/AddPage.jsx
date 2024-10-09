@@ -12,16 +12,15 @@ export default function AddPage() {
     let { cohort } = useParams()
     const coData = findCohortById(cohort)
     const [name, setName] = useState("");
-    const [qoute, setQoute] = useState("");
-    const [img, setImg] = useState("anothony.jpeg");
+    const [quote, setquote] = useState("");
+    const [img, setImg] = useState("");
 
     let inStyle = {
         borderColor: ""
     }
     // const clearFields = () => {
     //     setName("");
-    //     setQoute("");
-    //     setImg("anothony.jpeg");
+    //     setquote("");
     // }
 
     return (
@@ -35,20 +34,33 @@ export default function AddPage() {
                     <input type="text" id ='name-field' className='form-control' style={inStyle} onChange={(e) => setName(e.target.value)}/>
                 </div>
                 <div className="form-group">
-                    <label>Qoute</label>
+                    <label>quote</label>
                     <br/>
-                    <input type="text" id='qoute-field' className='form-control' style={inStyle} onChange={(e) => setQoute(e.target.value)}/>
+                    <input type="text" id='quote-field' className='form-control' style={inStyle} onChange={(e) => setquote(e.target.value)}/>
                 </div>
             </form>
             <button type="submit" className="btn" onClick={() => {
-                if (!name || !qoute) {
+                if (!name || !quote) {
                     alert("Please fill out all fields");
                     return;
                 }
-                data.find(co => co.cohort === cohort).entries.push({name, qoute, img, entryNum: data.find(co => co.cohort === cohort).entries.length + 1} 
+                data.find(co => co.cohort === cohort).entries.push({name, quote, img: getImg(img), entryNum: data.find(co => co.cohort === cohort).entries.length + 1} 
                 )}}>Submit</button>
             <br/>
         </div>
         </>
     )
+}
+
+function getImg (img) {
+    if (img === "") {
+        return ("nopic.png");
+    }
+    return img
+}
+
+function writeToFile(name, quote, img, entryNum) {
+    // TODO: write data to file
+    console.log(name, quote, img, entryNum)
+    
 }
