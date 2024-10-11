@@ -58,9 +58,3 @@ function getImg (img) {
     }
     return img
 }
-
-function writeToFile(name, quote, img, entryNum) {
-    // TODO: write data to file
-    console.log(name, quote, img, entryNum)
-    
-}

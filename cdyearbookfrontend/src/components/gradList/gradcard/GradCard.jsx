@@ -45,17 +45,14 @@ export function GradCard () {
                         </div>
                     </Paper>
                 ))}
-                </div>
-                {amountOfCards > gradData.length && (
-                    <>
-                    </>
-                )}
-                {amountOfCards < coData.entries.length && (
+                    {amountOfCards < coData.entries.length && (
                     <button className="btn" onClick={loadMore}>
                         <ArrowDownwardIcon className="down-arrow-1" />
                         <ArrowDownwardIcon className="down-arrow-2" />
                     </button>
-                )}
+                    )}
+                </div>
+
             </div>
         </>
     );
