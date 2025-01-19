@@ -6,7 +6,7 @@ export default function Home (){
     return(
         <>
             {yearData.map((info) => (
-             <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol" navButtonsAlwaysVisible = {true} indicators = {false} key={info.cohort}>  
+             <Carousel autoPlay = {false} animation = "slide" height={500} className="carousol" navButtonsAlwaysVisible = {true} indicators = {false} key={info.cohort} style={{backgroundColor: "gray"}}>  
                         {info.entries.map((gradInfo) =>(
                         <Paper key={gradInfo.entryNum}>
                             <div className= "grad-card-c" key={gradInfo.entryNum}>
