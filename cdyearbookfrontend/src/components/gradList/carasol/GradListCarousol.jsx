@@ -1,5 +1,6 @@
 import "./GradListCarousol.css";
-import Carousel from 'react-material-ui-carousel'
+// import Carousel from 'react-material-ui-carousel'
+import { Carousel } from "antd";
 import { Paper } from '@mui/material'
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -10,6 +11,7 @@ import data from "../../../resources/yearEntries.json";
 export function GradListCarousol (){
   let { cohort } = useParams()
   let [gradData, setGradData] = useState([]);
+  let [cardBack, setCardBack] = useState("");
   const coData = data.find((info) => info.cohort === cohort);
 
   useEffect(() => {
@@ -20,9 +22,9 @@ export function GradListCarousol (){
   })
     return(
         <>
-          <Carousel autoPlay = {false} animation = "slide" className="carousol" navButtonsAlwaysVisible = {true} indicators = {false} indicatorContainerProps={{style: {marginTop: "15%", marginBottom: "-5%"}}} key={coData.cohort} >  
+          <Carousel autoPlay = {false} animation = "slide" className="carousol" arrows={true} infinite={true} key={coData.cohort} >  
             {coData.entries.map((gradInfo) => (
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} key={gradInfo.entryNum}>
+              <div key={gradInfo.entryNum}  >
                 <div className= "grad-card-ca">
                   <li>
                     <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />

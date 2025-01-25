@@ -6,14 +6,14 @@
 .grad-card-ca{
   font-size: 1.5vw;
   text-align: center;
-  height: 80vh;
+  height: 40rem;
   display: inline-flex;
   flex-wrap: wrap;
   position: relative;
   align-content: center;
   justify-content: center;
   border-radius: 10px;
-  width: 80vw;
+  width: 60rem;
   align-self: center;
 
   img{
@@ -22,7 +22,7 @@
       border-radius: 10px;
   }
   li {
-      height: 80vh;
+      height: 60rem;
       background-color: rgba(61, 61, 117, .8);
       color: white;
       list-style-type: none;
@@ -32,15 +32,15 @@
       padding: 1vw;
       padding: auto;
       border-radius: 10px;
-      width: 26vw;
+      width: 60rem;
       max-width: 670px !important;
   }
   h1{
-      font-size: 200%;
+      font-size: 150%;
       font-weight: bold;
   }
   p{
-      font-size: 140%;
+      font-size: 90%;
       font-weight: lighter;
   }
 
