@@ -2,10 +2,13 @@ import './Header.css';
  import yrData from "../../resources/yearEntries.json"
 import { NavLink } from 'react-router-dom';
 import logo from './img/Code-Differently-logo-2020-2.png';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useEffect } from 'react';
+import { AuthContext } from '../../pages/loginpage/AuthContext';
 
 export function Header () {
+
+    const { email } = useContext(AuthContext);
 
     const [yearData, setYearData] = useState([]);
 
@@ -29,7 +32,22 @@ export function Header () {
                     </NavLink>
                 ))}
             </div>
-          
+            <div className='login-section'>
+                {getProf(email)}
+            </div>
         </div>
         );
+    }
+
+    function getProf(email){
+        if (email === ''){
+            return(
+                <NavLink to="./login" >Sign In</NavLink>
+            )
+        }
+        else{
+            return(
+                <p>{email}</p>
+            )
+        }
     }
