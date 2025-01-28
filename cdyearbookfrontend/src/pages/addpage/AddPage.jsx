@@ -7,10 +7,9 @@ function findCohortById(cohort) {
     return data.find(co => co.cohort === cohort);
 }
 
-export default function AddPage() {
+export default function AddPage(props) {
 
-    let { cohort } = useParams()
-    const coData = findCohortById(cohort)
+    const coData = findCohortById(props.cohort);
     const [name, setName] = useState("");
     const [quote, setquote] = useState("");
     const [img, setImg] = useState("");
@@ -34,7 +33,7 @@ export default function AddPage() {
                     alert("Please fill out all fields");
                     return;
                 }
-                data.find(co => co.cohort === cohort).entries.push({name, quote, img: getImg(img), entryNum: data.find(co => co.cohort === cohort).entries.length + 1} 
+                data.find(co => co.cohort === props.cohort).entries.push({name, quote, img: getImg(img), entryNum: data.find(co => co.cohort === props.cohort).entries.length + 1} 
                 )}}>Submit</button>
             </form>
             <br/>

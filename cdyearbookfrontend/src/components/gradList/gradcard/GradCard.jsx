@@ -7,11 +7,11 @@ import { useState } from "react";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { useEffect } from "react";
 
-export function GradCard () {
+export function GradCard (props) {
     const [amountOfCards, setAmountOfCards] = useState(6);
-    const { cohort } = useParams();
+    // const { cohort } = useParams();
     const [gradData, setGradData] = useState([]);
-    const coData = data.find((info) => info.cohort === cohort);
+    const coData = data.find((info) => info.cohort === props.cohort);
 
     useEffect(() => {
         const getFoo = async () => {
@@ -29,7 +29,7 @@ export function GradCard () {
 
             <div className="grad-card-container">
                 <div className="add-btn">
-                    <NavLink to={`/${cohort}/add`}>
+                    <NavLink to={`/${coData.cohort}/add`}>
                         Add
                     </NavLink>
                 </div>
