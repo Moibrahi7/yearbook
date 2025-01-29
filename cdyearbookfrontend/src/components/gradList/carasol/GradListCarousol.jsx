@@ -8,11 +8,10 @@ import { useState } from "react";
 import data from "../../../resources/yearEntries.json";
 
 
-export function GradListCarousol (){
-  let { cohort } = useParams()
+export function GradListCarousol (props){
   let [gradData, setGradData] = useState([]);
   let [cardBack, setCardBack] = useState("");
-  const coData = data.find((info) => info.cohort === cohort);
+  const coData = data.find((info) => info.cohort === props.cohort);
 
   useEffect(() => {
     const getFoo = async () => {
@@ -24,7 +23,7 @@ export function GradListCarousol (){
         <>
           <Carousel autoPlay = {false} animation = "slide" className="carousol" arrows={true} infinite={true} key={coData.cohort} >  
             {coData.entries.map((gradInfo) => (
-              <div key={gradInfo.entryNum}  >
+              <div key={gradInfo.entryNum}>
                 <div className= "grad-card-ca">
                   <li>
                     <img src={"/img/" + gradInfo.img} className="w-full" alt="Tailwind CSS Carousel component"  />

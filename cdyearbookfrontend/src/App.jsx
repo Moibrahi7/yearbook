@@ -20,8 +20,10 @@ function App() {
           <Route path='*' exact element= {<NotFound/>} />
           <Route path='/home' exact element= {<Home/>} />
           <Route path='/login' exact element= {<LoginPage/>} />
-          <Route path='/:cohort' exact element= {<GradPage/>} />
-          <Route path='/:cohort/add' exact element= {<AddPage/>} />
+          <Route path='/24.1' exact element= {<GradPage cohort={"24.1"} />} />
+          <Route path='/24.4' exact element= {<GradPage cohort={"24.4"} />} />
+          <Route path='/24.1/add' exact element= {<AddPage cohort={"24.1"}/>} />
+          <Route path='/24.4/add' exact element= {<AddPage cohort={"24.4"}/>} />
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </BrowserRouter>

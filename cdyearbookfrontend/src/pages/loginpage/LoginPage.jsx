@@ -29,12 +29,8 @@ export default function LoginPage () {
       };
     return (
         <>
-        <div className="wave-1"></div>
-        <div className="wave2"></div>
-        <div className="wave3"></div>
-        <div className="wave4"></div>
-
-            <form action="/home" onSubmit={handleSubmit}>
+        <div className="wave-2"> <img src="/img/wav.svg" alt="wave"/> </div>
+            <form action="/home" onSubmit={handleSubmit} className="log-in-form">
                 <h1 className="signin-title">Sign In</h1>
                 <h2>Username:</h2>
                 <input 
@@ -56,7 +52,7 @@ export default function LoginPage () {
                 onChange={(e) => setTempPassword(e.target.value)}
                 required
                 />
-                <input type="submit" value="Sign In" className="signin-btn"/>
+                <button type="submit" value="Sign In" className="sign-in-btn">Sign In</button>
             </form>
         </>
     )

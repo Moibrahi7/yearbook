@@ -1,11 +1,11 @@
 import { GradListCarousol } from "../../components/gradList/carasol/GradListCarousol";
 import { GradListGrid } from "../../components/gradList/grid/GradListGrid";
 
-export function GradPage () {
+export function GradPage (props) {
     return(
         <>
-            <GradListCarousol />
-            <GradListGrid />
+            <GradListCarousol cohort={props.cohort} />
+            <GradListGrid cohort={props.cohort} />
         </>
     )
 }
